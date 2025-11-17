@@ -1,24 +1,4 @@
 import sys
-
-#!/usr/bin/env python3
-"""
-Task 2 - Ellipse point classification.
-
-Usage:
-    python task2.py ellipse_file points_file
-
-ellipse_file contains two non-empty lines:
-    x0 y0
-    a b
-
-points_file contains one point per non-empty line:
-    x y
-
-Output (to console): one line per point with:
-    0 -> point lies on the ellipse
-    1 -> point inside
-    2 -> point outside
-"""
 from decimal import Decimal, getcontext, InvalidOperation
 
 # Increase precision for wide-ranging rational inputs
@@ -73,5 +53,5 @@ def main(argv):
         print(r)
     return 0
 
-if __name__ == "_main_":
+if __name__ == "__main__":
     sys.exit(main(sys.argv[1:]))

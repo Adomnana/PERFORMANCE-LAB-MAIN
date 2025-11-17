@@ -1,0 +1,16 @@
+{
+  "tests": [
+    {
+      "id": "1",
+      "title": "Test Login"
+    },
+    {
+      "id": "2",
+      "title": "Test Signup"
+    },
+    {
+      "id": "3",
+      "title": "Test Logout"
+    }
+  ]
+}

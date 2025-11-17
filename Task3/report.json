@@ -1,0 +1,19 @@
+{
+  "tests": [
+    {
+      "id": "1",
+      "title": "Test Login",
+      "value": "passed"
+    },
+    {
+      "id": "2",
+      "title": "Test Signup",
+      "value": "failed"
+    },
+    {
+      "id": "3",
+      "title": "Test Logout",
+      "value": "passed"
+    }
+  ]
+}

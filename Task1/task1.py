@@ -50,5 +50,5 @@ def main(argv):
     print(out)
     return 0
 
-if __name__ == "_main_":
+if __name__ == "__main__":
     sys.exit(main(sys.argv[1:]))

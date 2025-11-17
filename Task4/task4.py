@@ -1,17 +1,5 @@
 import sys
 
-#!/usr/bin/env python3
-"""
-Task 4 - Minimum moves to equalize integers.
-
-Usage:
-    python task4.py numbers_file
-
-numbers_file contains one integer per non-empty line. The program reads
-all integers and prints the minimum number of +1/-1 moves needed to make
-all numbers equal. If the minimum is > 20, prints the prescribed message.
-"""
-
 def read_ints_from_file(path: str):
     vals = []
     with open(path, "r", encoding="utf-8") as f:
@@ -54,5 +42,5 @@ def main(argv):
         print("20 moves are not enough to bring all the elements of the array to one number.")
     return 0
 
-if __name__ == "_main_":
+if __name__ == "__main__":
     sys.exit(main(sys.argv[1:]))

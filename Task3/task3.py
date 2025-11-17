@@ -1,28 +1,9 @@
 import sys
-
-#!/usr/bin/env python3
-"""
-Task 3 - Fill values into test structure.
-
-Usage:
-    python task3.py values.json tests.json report.json
-
-values.json contains test results (various plausible structures).
-tests.json contains nested objects where dicts with an "id" key should
-receive a "value" field filled from values.json. The filled structure
-is written to report.json.
-"""
-
 import json
 from typing import Any, Dict
 
 def build_values_map(obj: Any, mapping: Dict[str, Any]):
-    """
-    Recursively extract id->value entries from values.json. Accepts:
-    - dict that maps id->value
-    - list of {'id':.., 'value':..} entries
-    - nested structures containing such entries
-    """
+
     if isinstance(obj, dict):
         if 'id' in obj and 'value' in obj:
             mapping[str(obj['id'])] = obj['value']
@@ -46,10 +27,7 @@ def build_values_map(obj: Any, mapping: Dict[str, Any]):
     return mapping
 
 def fill_values_in_tests(obj: Any, mapping: Dict[str, Any]):
-    """
-    Recursively traverse tests.json. For any dict that has an 'id', set its
-    'value' to mapping[id] if present (otherwise keep existing or null).
-    """
+
     if isinstance(obj, dict):
         new = {}
         for k, v in obj.items():
@@ -91,5 +69,5 @@ def main(argv):
     print(f"Wrote report to {report_path}")
     return 0
 
-if __name__ == "_main_":
+if __name__ == "__main__":
     sys.exit(main(sys.argv[1:]))
